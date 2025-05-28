@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "4b01e86f-9b69-4561-9a1a-87048dc12747",
+		"name": "##Project #3->Imgur REST API  -- REST Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12241553",
+		"_collection_link": "https://parveen7777.postman.co/workspace/API-Testing-Pramod~faf8a19c-3fa4-4b4c-87a4-2d975a0f27f9/collection/12241553-4b01e86f-9b69-4561-9a1a-87048dc12747?action=share&source=collection_link&creator=12241553"
+	},
+	"item": [
+		{
+			"name": "Upload image Content",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Client-ID {{clientId}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/flakrim/Downloads/GHJQTpX.jpeg"
+						},
+						{
+							"key": "type",
+							"value": "image",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Simple upload",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is a simple image upload in Imgur",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.imgur.com/3/image",
+					"protocol": "https",
+					"host": [
+						"api",
+						"imgur",
+						"com"
+					],
+					"path": [
+						"3",
+						"image"
+					]
+				},
+				"description": "Generated from cURL: curl --location 'https://api.imgur.com/3/image' \\\r\n--header 'Authorization: Client-ID {{clientId}}' \\\r\n--form 'image=@\"/home/flakrim/Downloads/GHJQTpX.jpeg\"' \\\r\n--form 'type=\"image\"' \\\r\n--form 'title=\"Simple upload\"' \\\r\n--form 'description=\"This is a simple image upload in Imgur\"'"
+			},
+			"response": []
+		}
+	]
+}
